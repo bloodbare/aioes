@@ -41,7 +41,7 @@ def _make_path(*parts):
     """
     # TODO: maybe only allow some parts to be lists/tuples ?
     # preserve ',' and '*' in url for nicer URLs in logs
-    return '/' + '/'.join(
+    return '/'.join(
         quote_plus(_escape(p), b',*')
         for p in parts if p not in SKIP_IN_PATH)
 
